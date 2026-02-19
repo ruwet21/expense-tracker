@@ -44,7 +44,8 @@ const handleTransactionSubmitted = (newTransaction) => {
     id: generateUniqueId(),
     text: newTransaction.text,
     amount: newTransaction.amount,
-    toast.success('Transaction added.');
+    
   });
+  toast.success('Transaction added.');
 };
 </script>
