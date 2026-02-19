@@ -22,6 +22,10 @@ import BalanceCard from "./components/BalanceCard.vue";
 import Transactions from "./components/Transactions.vue";
 import AddTransaction from "./components/AddTransaction.vue";
 import { ref, computed } from "vue";
+import { useToast } from 'vue-toastification';
+
+const toast = useToast();
+  
 
 const transactions = ref([]);
 // Get total
