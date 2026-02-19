@@ -1,9 +1,9 @@
 <template>
-  <div class="card p-6">
-    <form @submit.prevent="onSubmit" class="space-y-4">
+  <div class="bg-white rounded-xl shadow-md p-6">
+    <form @submit.prevent="onSubmit" class="space-y-5">
       <div>
         <label
-          class="block text-xs font-medium text-slate-500 mb-1 uppercase tracking-wider"
+          class="block text-xs font-medium text-slate-500 mb-2 uppercase tracking-wider"
         >
           Description
         </label>
@@ -11,13 +11,13 @@
           type="text"
           placeholder="e.g. Grocery"
           v-model="text"
-          class="w-full px-4 py-3 bg-slate-50 border-none rounded-lg text-slate-900 placeholder:text-slate-400"
+          class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300"
         />
       </div>
 
       <div>
         <label
-          class="block text-xs font-medium text-slate-500 mb-1 uppercase tracking-wider"
+          class="block text-xs font-medium text-slate-500 mb-2 uppercase tracking-wider"
         >
           Amount
         </label>
@@ -26,19 +26,20 @@
           step="0.01"
           placeholder="e.g. -45.00 or 100.00"
           v-model="amount"
-          class="w-full px-4 py-3 bg-slate-50 border-none rounded-lg text-slate-900 placeholder:text-slate-400"
+          class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300"
         />
       </div>
 
       <button
         type="submit"
-        class="w-full bg-slate-900 text-white font-semibold py-4 rounded-lg"
+        class="w-full bg-slate-900 hover:bg-slate-800 transition-colors text-white font-semibold py-4 rounded-lg"
       >
         Add Transaction
       </button>
     </form>
   </div>
 </template>
+
 <script setup>
 import { useToast } from "vue-toastification";
 import { ref } from "vue";

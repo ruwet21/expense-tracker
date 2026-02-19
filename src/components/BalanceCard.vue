@@ -1,5 +1,5 @@
 <template>
-  <div class="card p-8 text-center">
+  <div class="bg-white rounded-xl shadow-md p-8 text-center mb-6">
     <p class="text-slate-500 text-sm mb-1">Total Balance</p>
     <h2 class="text-4xl font-bold text-slate-900">${{ total }}</h2>
   </div>

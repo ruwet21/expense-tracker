@@ -1,13 +1,21 @@
 <template>
-  <div class="min-h-screen py-12 px-4 bg-slate-50">
-    <div class="max-w-md mx-auto space-y-8">
+  <div class="min-h-screen bg-slate-100 py-14 px-4">
+    <div class="max-w-md mx-auto">
+      <!-- Header -->
       <HeaderTitle />
+
+      <!-- Balance -->
       <BalanceCard :total="total" />
+
+      <!-- Transactions -->
       <Transactions :transactions="transactions" />
+
+      <!-- Add Form -->
       <AddTransaction @add-transaction="handleTransactionSubmitted" />
     </div>
   </div>
 </template>
+
 <script setup>
 import HeaderTitle from "./components/HeaderTitle.vue";
 import BalanceCard from "./components/BalanceCard.vue";
